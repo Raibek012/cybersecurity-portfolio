@@ -1,0 +1,1 @@
+const button=document.getElementById('lang');let lang='ru';function render(){document.documentElement.lang=lang;document.querySelectorAll('[data-ru][data-en]').forEach(el=>el.textContent=el.getAttribute('data-'+lang));button.textContent=lang==='ru'?'EN':'RU';}button.addEventListener('click',()=>{lang=lang==='ru'?'en':'ru';render()});render();
